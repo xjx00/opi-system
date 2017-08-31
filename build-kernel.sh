@@ -10,9 +10,9 @@ mkdir -p $BUILD_DEST
 
 # Accept custom defconfig
 DEFCONFIG=${DEFCONFIG:="sunxi_defconfig"}
-if [ "x$DEFCONFIG" != "sunxi_defconfig" ]; then
-  cp /defconfigs/$DEFCONFIG ./arch/arm/configs/
-fi
+#if [ "x$DEFCONFIG" != "sunxi_defconfig" ]; then
+#  cp /defconfigs/$DEFCONFIG ./arch/arm/configs/
+#fi
 
 # Compile Linux kernel
 MAKE="make -j 8 ARCH=arm CROSS_COMPILE=$CROSS_COMPILE"
