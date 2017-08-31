@@ -19,7 +19,7 @@ export BUILD_NR="$(date '+%Y%m%d-%H%M%S')"
 echo "BUILD_NR=$BUILD_NR"
 
 # run build
-export DEFCONFIG=sunxi-defconfig
+export DEFCONFIG=sunxi_defconfig
 docker-compose build
 docker-compose run builder
 
