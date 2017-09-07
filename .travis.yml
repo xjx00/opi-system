@@ -1,0 +1,14 @@
+sudo: required
+language: bash
+script:
+  - sudo apt-get install -y git
+  - git clone --depth 1 https://github.com/armbian/build
+  - cd build
+  - sudo ./compile.sh BOARD=orangepizero BRANCH=next KERNEL_ONLY=yes RELEASE=xenial
+after_success:
+  - ls -al build
+branches:
+  only:
+    - master
+  except:
+    - /^v\d.*$/
